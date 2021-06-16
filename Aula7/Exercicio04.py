@@ -6,6 +6,9 @@ soma = 0
 quantidade_Numeros = int(input('Quantidade de somas: '))
 
 for i in range(quantidade_Numeros):
-    soma = soma + int(input('Qual o numero da vez'))
+    soma = soma + int(input('Qual o numero da vez '))
 
 print('A soma é: ', soma)
+print()
+print('Fim do programa')
+print()
