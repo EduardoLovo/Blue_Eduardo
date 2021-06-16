@@ -2,9 +2,9 @@
 # soma deles (o usuário vai dizer quantos números serão informados antes de começar)
 
 soma = 0
-
+print()
 quantidade_Numeros = int(input('Quantidade de somas: '))
-
+print()
 for i in range(quantidade_Numeros):
     soma = soma + int(input('Qual o numero da vez '))
 
