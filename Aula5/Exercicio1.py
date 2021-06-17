@@ -11,4 +11,4 @@ while sexo != 'M' and sexo != 'F':
 
 print(sexo)
 print()
-Print('Fim do Programa')
+print('Fim do Programa')
