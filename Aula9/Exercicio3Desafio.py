@@ -3,19 +3,20 @@
 # números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
 
 import random   
+# from random import randint
 
-count = 0
+cont = 0
 jogos = []
 palpites = []
 
 quantidade = int(input('Informe quantos jogos deseja gerar: '))
 
 for i in range(quantidade):
-    while count < 6:
-        numero = random.randit(1,60)
+    while cont < 6:
+        numero = random.randint(1, 60)
         if numero not in palpites:
             palpites.append(numero)
-            count += 1
+            cont += 1
     cont = 0
     jogos.append(palpites)
     palpites = []
@@ -24,3 +25,8 @@ print(jogos)
 print()
 print('Fim do programa')
 print()
+
+##########
+
+# Versão do professor:
+
