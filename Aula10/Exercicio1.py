@@ -12,11 +12,11 @@ for i in range(3):
     lista.append([nome,idade])
 # print(lista)
 # print()
-    for j in lista:
-        if lista[0][1] >= 18:
-            print(f'{lista[0][0]} é maior de idade')
-        else:
-            print(f'{lista[0][0]} é menor de idade')
+for i in lista:
+    if lista[0][1] >= 18:
+        print(f'{lista[1][0]} é maior de idade')
+    else:
+        print(f'{lista[1][0]} é menor de idade')
             
         
 print()
