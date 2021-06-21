@@ -5,18 +5,18 @@
 
 lista = []
 
-for i in range(3):
+for i in range(5):
     nome = (input('Digite seu nome: '))
     idade = int(input('Digite sua idade: '))
     
     lista.append([nome,idade])
-# print(lista)
-# print()
-for i in lista:
-    if lista[0][1] >= 18:
-        print(f'{lista[1][0]} é maior de idade')
+print(lista)
+print()
+for j in lista:
+    if j[1] >= 18:
+        print(f'{j[0]} é maior de idade')
     else:
-        print(f'{lista[1][0]} é menor de idade')
+        print(f'{j[0]} é menor de idade')
             
         
 print()
