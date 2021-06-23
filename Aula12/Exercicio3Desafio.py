@@ -10,7 +10,11 @@
 
 lista =[]
 d = {}
+listaMulheres = []
+idadeAcima = []
 
+### Cadastros
+print('==~~=='*5)
 while True:
     nome = input('Digite seu nome:\n').strip()
     sexo = input('Digite seu sexo biologico [masculino/feminino]:\n').upper().strip()
@@ -18,10 +22,12 @@ while True:
         print('Digite apenas "Masculino" ou "Feminino".')
         sexo = input('Digite seu sexo biologico [masculino/feminino]:\n').upper().strip()
     idade = int(input('Digite sua idade:\n'))
-    d['nome'] = [nome]
-    d['sexo'] = [sexo]
-    d['idade'] = [idade]
+    d['nome'] = nome
+    d['sexo'] = sexo
+    d['idade'] = idade
     lista.append(d)
+    if sexo == 'FEMININO':     ### Questão C
+        listaMulheres.append(nome)
     per = input('Deseja fazer outro cadastro? [sim/não]:\n').upper().strip()
     d = {}
     while per != 'SIM' and per != 'NÃO':
@@ -29,12 +35,29 @@ while True:
         per = input('Deseja fazer outro cadastro? [sim/não]\n').upper().strip()
     if per == 'NÃO':
         break
-idade = 0
-
     
-print(len(lista))
+### Questões A e B
+somaIdade = []
+for i in lista:
+    var = i['idade']
+    somaIdade.append(var)
+quantidadeDePessoas = len(lista)
+soma = sum(somaIdade)//quantidadeDePessoas  ## arrumar numero quebrado
 
+### Questão D
+for j in lista:
+    varIdade = j['idade']
+    if varIdade > soma:
+        idadeAcima.append(varIdade)   
 
-print(lista)
-
-
+print(listaMulheres)
+print()
+print('==~~=='*5)
+print(f'A quantidade de pessoas cadastradas é {quantidadeDePessoas}!')  ## A
+print(f'A media de idade é {soma}!')  ## B
+print(f'Lista de mulheres {listaMulheres}.')  ## C
+print(f'Lista de idades acima da media {idadeAcima}.')
+print()
+print('Fim do programa')
+print()
+print('==~~=='*5)
