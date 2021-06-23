@@ -16,7 +16,7 @@ idadeAcima = []
 ### Cadastros
 print('==~~=='*5)
 while True:
-    nome = input('Digite seu nome:\n').strip()
+    nome = input('Digite seu nome:\n').title().strip()
     sexo = input('Digite seu sexo biologico [masculino/feminino]:\n').upper().strip()
     while sexo != 'MASCULINO' and sexo != 'FEMININO':
         print('Digite apenas "Masculino" ou "Feminino".')
@@ -56,8 +56,7 @@ print('==~~=='*5)
 print(f'A quantidade de pessoas cadastradas é {quantidadeDePessoas}!')  ## A
 print(f'A media de idade é {soma}!')  ## B
 print(f'Lista de mulheres {listaMulheres}.')  ## C
-print(f'Lista de idades acima da media {idadeAcima}.')
+print(f'Lista de idades acima da media {idadeAcima}.')  ## D
 print()
 print('Fim do programa')
-print()
 print('==~~=='*5)
