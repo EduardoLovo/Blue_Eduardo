@@ -6,13 +6,11 @@ def autoriza_voto(anoDeNascimento):
 
     if idade >= 18:
         autorizacao = 'Voto obrigatorio'
-        return autorizacao
     elif idade <= 17 and idade == 16:
         autorizacao = 'Voto opcional'
-        return autorizacao
     else:
         autorizacao = 'Voto negado'
-        return autorizacao
+    return autorizacao    
 
 def votacao(autorizacao,voto):
     if autorizacao == 'Voto obrigatorio':
@@ -22,7 +20,6 @@ def votacao(autorizacao,voto):
         if a == 'sim':
             pass
     
-        
     gustavo = 0
     gabriel = 0
     eduardo = 0
