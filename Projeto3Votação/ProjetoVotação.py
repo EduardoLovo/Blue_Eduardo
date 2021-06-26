@@ -24,19 +24,19 @@ def votacao(autorizacao,voto):
     gabriel = 0
     eduardo = 0
     votoNulo = 0
-    votoBranco = 0
+    votoBranco = 0 
 
     candidatos = '[1] : candidato1','[2] : candidato2','[3] : candidato3','[4] : Voto Nulo','[5] : Voto em Branco'
     candidatos1 = {1:'Gustavo',2:'Gabriel',3:'Eduardo',4:'Voto Nulo',5:'Voto em Branco'}
     for i in candidatos:
         print(i)
-    voto = int(input('faça seu voto: '))    
     # voto = int(input('faça seu voto: '))
     while voto in candidatos1:
         print(f'Voce votou em {candidatos1[voto]}')
         
         if voto == 1:
             gustavo += 1
+            return gustavo
         if voto == 2:
             gabriel += 1
         if voto == 3:
@@ -49,8 +49,11 @@ def votacao(autorizacao,voto):
         # print('==~~'*5)
         if proxVoto == 's':
             voto = int(input('faça seu voto: '))
+            votacao(autorizacao,voto)
+            
         else:
             break
+        
     else:
         print('numero invalido')
     print('==~~'*5)
@@ -60,10 +63,10 @@ def votacao(autorizacao,voto):
     print(f'{votoNulo} pessoas votaram nulo.')
     print(f'{votoBranco} pessoas votaram em branco.')
     print('==~~'*5)
-
+    
         # if autorizacao == 'Voto negado':
         #     print()   
-        
+       
 
 Anod = int(input('Digite o ano de nascimento '))
 
