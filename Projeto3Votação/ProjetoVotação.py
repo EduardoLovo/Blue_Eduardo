@@ -79,16 +79,3 @@ for i in candidatos:
 voto = int(input('faça seu voto: '))
 votacao(autorizacao,voto)
 print(votacao(autorizacao,voto))
-# print(b)
-# gus = gustavo
-# gabriel = 0
-# eduardo = 0
-# votoNulo = 0
-# votoBranco = 0
-# print('==~~'*5)
-# print(f'Gustavo teve um total de {gustavo} votos.')
-# print(f'Gabriel teve um total de {gabriel} votos.')
-# print(f'Eduardo teve um total de {eduardo} votos.')
-# print(f'{votoNulo} pessoas votaram nulo.')
-# print(f'{votoBranco} pessoas votaram em branco.')
-# print('==~~'*5)
