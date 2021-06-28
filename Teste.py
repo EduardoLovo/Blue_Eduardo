@@ -1,6 +1,6 @@
 ### Prgrama de contagem de Votos ###
 
-def autoriza_voto(anoDeNascimento):
+def autoriza_voto(anoDeNascimento):                 ### Função 1 (Verifica a idade para autorizar voto)
     
     idade = 2021 - anoDeNascimento
 
@@ -14,35 +14,35 @@ def autoriza_voto(anoDeNascimento):
 
 
 
-def votacao(autorizacao,voto):
+def votacao(autorizacao,voto):                     ### Função 2 (Valida a autorização e o voto)
     if autorizacao == 'Voto obrigatorio':
-        print('Voto OBRIGATÓRIO!')
+        print('Voto OBRIGATÓRIO!')                          ### Voto obrigatorio
         print('==~~'*5)
         conf = ('[1] : Confirmar' , '[2] : Cancelar')
         if voto == 1:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gustavo", insira "1"  para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou em "Gustavo", insira "1"  para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
+                confirmação = int(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: '))
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Gustavo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)    
         if voto == 2:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
@@ -51,10 +51,10 @@ def votacao(autorizacao,voto):
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Gabriel'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 3:
@@ -114,7 +114,7 @@ def votacao(autorizacao,voto):
             if confirmação == '2':
                 print('CANCELADO')
             print('==~~'*5)
-    if autorizacao == 'Voto opcional':
+    if autorizacao == 'Voto opcional':                          ### Voto opcional
         print('Voto OPCIONAL!')
         print('==~~'*5)
         conf = '[1] : Confirmar' , '[2] : Cancelar'
@@ -213,7 +213,7 @@ def votacao(autorizacao,voto):
             if confirmação == '2':
                 print('CANCELADO')
             print('==~~'*5)
-    if autorizacao == 'Voto negado':
+    if autorizacao == 'Voto negado':                    ### Voto negado
         print('"Voto NEGADO", Você não pode votar, por não ter 16 anos ou mais!')
         print('==~~'*5)
     l = ['[1] : Continuar votação', '[2] : Encerrar votação e exibir resultado']
@@ -228,7 +228,7 @@ def votacao(autorizacao,voto):
         resultado = str(input('Insira "1" para continuar votação ou "2" para encerrar votação e exibir resultado: '))
     if resultado == '2':
         print('==~~'*5)
-        print('Gustavo recebeu', d['Gustavo'], 'votos')
+        print('Gustavo recebeu', d['Gustavo'], 'votos')                                        ### resultado
         print('Gabriel recebeu', d['Gabriel'], 'votos')
         print('Eduardo recebeu', d['Eduardo'], 'votos')
         print(d['Voto Nulo'], 'pessoas votaram "Nulo"')
@@ -242,6 +242,8 @@ def votacao(autorizacao,voto):
             print('Eduardo é o campeão')
         else:
             print('Não teve campeão! Houve empate entre os candidatos!')
+        fim = 2
+        return fim
     if resultado == '1': 
         pass  
     ###
@@ -252,12 +254,12 @@ candidatos1 = {1:'Gustavo',2:'Gabriel',3:'Eduardo',4:'Voto Nulo',5:'Voto em Bran
     ###
 while True:
     print('==~~'*5)
-    Anod = int(input('Digite o ano de nascimento '))
+    Anod = int(input('Digite o ano de nascimento '))                    ### Entrada do ano de nascimento
     print('==~~'*5)
     autoriz = autoriza_voto(Anod)
     for i in candidatos:
         print(i)
-    vot = int(input('faça seu voto: ')) 
+    vot = int(input('faça seu voto: '))                                        ### Entrada do voto
     while vot != 1 and vot != 2 and vot != 3 and vot != 4 and vot != 5:
         print('Numero invalido!!! Escolha entre as 5 opções citadas')
         print('==~~'*5)
@@ -266,17 +268,7 @@ while True:
         vot = int(input('faça seu voto: ')) 
     print('==~~'*5)   
     votacao(autoriz,vot)
-    # c = '[s] : sim', '[n] : não'
-    # print('==~~'*5)
-    # for i in c:
-    #     print(i)
-    # proxVoto = input('Deseja vortar novamente? [s/n]: ').strip().lower()
-    # while proxVoto != 's' and proxVoto != 'n':
-    #     print('Escolha apenas entre "s" para sim ou "n" para não.')
-    #     for i in c:
-    #         print(i)
-    #     proxVoto = input('Deseja vortar novamente? [s/n]: ').strip().lower()
-    # if proxVoto == 's':
-    #     pass
-    # else:
-    #     break
+    if votacao(autoriz,vot) == 2:
+        break
+   
+    
