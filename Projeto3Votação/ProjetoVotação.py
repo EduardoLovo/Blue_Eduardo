@@ -18,7 +18,7 @@ def votacao(autorizacao,voto):
     if autorizacao == 'Voto obrigatorio':
         print('Voto OBRIGATÓRIO!')
         print('==~~'*5)
-        conf = '[0] : Confirmar' , '[1] : Cancelar'
+        conf = ('[0] : Confirmar' , '[1] : Cancelar')
         if voto == 1:
             for i in conf:
                 print(i)
@@ -76,7 +76,7 @@ def votacao(autorizacao,voto):
         if voto == 4:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gabriel", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()
+            confirmação = str(input('Você votou "Nulo", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()
             while confirmação != '0' and confirmação != '1':
                 print('Escolha apenas uma das duas opções')
                 for i in conf:
@@ -94,12 +94,12 @@ def votacao(autorizacao,voto):
         if voto == 5:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gabriel", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()
+            confirmação = str(input('Você votou em "Branco", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()
             while confirmação != '0' and confirmação != '1':
                 print('Escolha apenas uma das duas opções')
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou "Nulo", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()  
+                confirmação = str(input('Você votou em "Branco", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()  
             else:
                 print('==~~'*5)
                 print('ok')
