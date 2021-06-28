@@ -185,7 +185,7 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = int(input('Você votou "Nulo", insira "0" (zero) para confirmar ou "1" para cancelar: '))
+                confirmação = int(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: '))
             else:
                 print('==~~'*5) 
                 print('ok')
