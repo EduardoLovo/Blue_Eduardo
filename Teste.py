@@ -47,7 +47,7 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: ')).strip()  
+                confirmação = int(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: ')) 
             else:
                 print('==~~'*5)
                 print('ok')
@@ -60,58 +60,58 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
         if voto == 3:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: ')).strip()  
+                confirmação = int(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: ')) 
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Eduardo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 4:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: ')).strip()  
+                confirmação = int(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: ')) 
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Voto Nulo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 5:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: ')).strip()  
+                confirmação = int(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: ')) 
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Voto em Branco'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
     if autorizacao == 'Voto opcional':                          ### Voto opcional
@@ -121,96 +121,96 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
         if voto == 1:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '1' and confirmação != '2':
+            confirmação = int(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
+                confirmação = int(input('Você votou em "Gustavo", insira "1" para confirmar ou "2" para cancelar: '))
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Gustavo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)   
         if voto == 2:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '0' and confirmação != '1':
+            confirmação = int(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: ')).strip()
+                confirmação = int(input('Você votou em "Gabriel", insira "1" para confirmar ou "2" para cancelar: '))
             else:
                 print('==~~'*5)  
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Gabriel'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 3:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '0' and confirmação != '1':
+            confirmação = int(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
+                confirmação = int(input('Você votou em "Eduardo", insira "1" para confirmar ou "2" para cancelar: '))
             else:  
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Eduardo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 4:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '0' and confirmação != '1':
+            confirmação = int(input('Você votou "Nulo", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numero invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou "Nulo", insira "0" (zero) para confirmar ou "1" para cancelar: ')).strip()
+                confirmação = int(input('Você votou "Nulo", insira "0" (zero) para confirmar ou "1" para cancelar: '))
             else:
                 print('==~~'*5) 
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Voto Nulo'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
         if voto == 5:
             for i in conf:
                 print(i)
-            confirmação = str(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: ')).strip()
-            while confirmação != '0' and confirmação != '1':
+            confirmação = int(input('Você votou em "Branco", insira "1" para confirmar ou "2" para cancelar: '))
+            while confirmação != 1 and confirmação != 2:
                 print('Numreo invalido!!! Escolha apenas uma das duas opções')
                 print('==~~'*5)
                 for i in conf:
                     print(i)
-                confirmação = str(input('Você votou "Branco", insira "1" para confirmar ou "2" para cancelar: ')).strip()
+                confirmação = int(input('Você votou "Branco", insira "1" para confirmar ou "2" para cancelar: '))
             else:
                 print('==~~'*5)
                 print('ok')
-            if confirmação == '1':
+            if confirmação == 1:
                 d['Voto em Branco'] += 1
                 print('CONFIRMADO')
-            if confirmação == '2':
+            if confirmação == 2:
                 print('CANCELADO')
             print('==~~'*5)
     if autorizacao == 'Voto negado':                    ### Voto negado
@@ -219,14 +219,14 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
     l = ['[1] : Continuar votação', '[2] : Encerrar votação e exibir resultado']
     for i in l:
         print(i)
-    resultado = str(input('Insira "1" para continuar votação ou "2" para encerrar votação e exibir resultado: '))
-    while resultado != '1' and resultado != '2':
+    resultado = int(input('Insira "1" para continuar votação ou "2" para encerrar votação e exibir resultado: '))
+    while resultado != 1 and resultado != 2:
         print('Numero invalido!!! Escolha apenas uma das duas opçoes')
         print('==~~'*5)
         for i in l:
             print(i)
-        resultado = str(input('Insira "1" para continuar votação ou "2" para encerrar votação e exibir resultado: '))
-    if resultado == '2':
+        resultado = int(input('Insira "1" para continuar votação ou "2" para encerrar votação e exibir resultado: '))
+    if resultado == 2:
         print('==~~'*5)
         print('Gustavo recebeu', d['Gustavo'], 'votos')                                        ### resultado
         print('Gabriel recebeu', d['Gabriel'], 'votos')
@@ -236,23 +236,27 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
         print('==~~'*5)
         if d['Gustavo'] > d['Gabriel'] and d['Gustavo'] > d['Eduardo'] :
             print('Gustavo é o campeão')
+            print('==~~'*5)
         elif d['Gabriel'] > d['Gustavo'] and d['Gabriel'] > d['Eduardo']:
             print('Gabriel é o campeão')
+            print('==~~'*5)
         elif d['Eduardo'] > d['Gabriel'] and d['Eduardo'] > d['Gustavo']:
             print('Eduardo é o campeão')
+            print('==~~'*5)
         else:
             print('Não teve campeão! Houve empate entre os candidatos!')
-        fim = 2
-        return fim
-    if resultado == '1': 
+            print('==~~'*5)
+        u.append(1)
+    if resultado == 1: 
         pass  
     ###
 d = {'Gustavo' : 0 , 'Gabriel' : 0 , 'Eduardo' : 0 , 'Voto Nulo' : 0 , 'Voto em Branco' : 0}     
 candidatos = '[1] : Gustavo','[2] : Gabriel','[3] : Eduardo','[4] : Voto Nulo','[5] : Voto em Branco'
 candidatos1 = {1:'Gustavo',2:'Gabriel',3:'Eduardo',4:'Voto Nulo',5:'Voto em Branco'} 
-
+u = [2,2]
     ###
-while True:
+
+while sum(u) == 4:
     print('==~~'*5)
     Anod = int(input('Digite o ano de nascimento '))                    ### Entrada do ano de nascimento
     print('==~~'*5)
@@ -268,7 +272,8 @@ while True:
         vot = int(input('faça seu voto: ')) 
     print('==~~'*5)   
     votacao(autoriz,vot)
-    if votacao(autoriz,vot) == 2:
-        break
+    
+        
+
    
     
