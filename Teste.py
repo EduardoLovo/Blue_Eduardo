@@ -249,11 +249,14 @@ def votacao(autorizacao,voto):                     ### Função 2 (Valida a auto
         u.append(1)
     if resultado == 1: 
         pass  
+
     ###
+
 d = {'Gustavo' : 0 , 'Gabriel' : 0 , 'Eduardo' : 0 , 'Voto Nulo' : 0 , 'Voto em Branco' : 0}     
 candidatos = '[1] : Gustavo','[2] : Gabriel','[3] : Eduardo','[4] : Voto Nulo','[5] : Voto em Branco'
 candidatos1 = {1:'Gustavo',2:'Gabriel',3:'Eduardo',4:'Voto Nulo',5:'Voto em Branco'} 
 u = [2,2]
+
     ###
 
 while sum(u) == 4:
