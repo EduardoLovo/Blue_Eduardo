@@ -1,5 +1,4 @@
 ### Prgrama de contagem de Votos ###
-### Prgrama de contagem de Votos ###
 
 def autoriza_voto(anoDeNascimento):                 ### Função 1 (Verifica a idade para autorizar voto)
     
