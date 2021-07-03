@@ -19,22 +19,32 @@ class bombaCombustivel():
         self.quantidadeCombustivel = quantidadeCombustivel
 
     def abastecerPorValor(self):
-        self.valor = float(input('Qual valor deseja abastecer? '))
-
+        self.valor = int(input('Qual valor deseja abastecer? '))
+        total = self.valor * self.quantidadeCombustivel
+        print(f'foi abastecido {total} de litros')
 
     def abastecerPorLitro(self):
-        self.valorL = float(input('Quantos litros deseja abastecer? '))
+        self.valorL = int(input('Quantos litros deseja abastecer? '))
+
 
     def alterarValor(self):
-        selfvalorGasolina = 
-        selfvalorEtanol = 
+        self.gasolina = gasolina
+        self.etanol = 3
 
     def alterarCombustivel(self):
-        gasolina = 
-        etanol = 
+        self.gasolina = gasolina
+        self.etanol = etanol
 
-    def alterarQuantidadeCombustive():
-        quantidadeCombus = 
+    def alterarQuantidadeCombustive(self):
+        self.quantidadeCombus = 1
+
+gasolina = 5
+etanol = 3
+modo = input('deseja abastecer por litro ou por valor?')
+if modo == 'litro':
+    bombaCombustivel.abastecerPorLitro
+    abastecer = int(input('quantos litros deseja abastecer?'))
 
 
-BombaGasolina = bombaCombustivel
+
+carro1 = bombaCombustivel('gasolina',gasolina,modo)
