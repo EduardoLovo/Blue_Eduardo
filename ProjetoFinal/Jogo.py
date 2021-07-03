@@ -1,4 +1,4 @@
-  ### Jogo Super Batata ###
+  #### Jogo Super Batata ####
 
 import random
 
@@ -39,11 +39,14 @@ class Heroi():
         lista_exercicio = ['Seus exercicios matutinos foram muito bons e você ganhou 5 de forca'
         'Enquanto praticava seus exercicios choveu e você conseguiu ficar muito forte, sua força aumenta 7'
         'Hoje foi um tempo de seca e seus exercicios não foram muito bons, você perde 3 de força']
-
+        ''
+        ''
     def missao(self):
         lista_missao = [f'Na sua missao diaria uma gange de Pulgões te atacou e voce perdeu {self.perde_forca} de forca.',
         f'Na sua missao diaria você achou nutrientes e sua força aumentou para {self.aumenta_forca}. '
         'Na sua missão diaria você descobriu o ponto fraco do seu inimigo, seu inimigo perdeu 5 de força']
+        ''
+        ''
         random.choice(lista_missao)
 
 class Vilao:
@@ -66,9 +69,5 @@ if (__name__ == '__main__'):
     exercicio = False
     missao = False
     tempo = True
-    personagem = Personagem()
+    
     while True:
-        print('==~~'*5)
-        personagem = Personagem
-        print(Fase.fase1)
-        print()
