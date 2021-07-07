@@ -12,8 +12,8 @@ class Personagem:
         # self.clima=''
        
 class Heroi(Personagem):
-    def __init__(self,clima):
-        super().__init__(clima)
+    def __init__(self):
+        super().__init__()
         self.vitalidade= 3 # vida do Herói
         self.clima= clima
 
@@ -25,19 +25,19 @@ class Heroi(Personagem):
         'Enquanto praticava seus exercícios choveu e você conseguiu ficar muito forte!\nSua força aumentou em +7 pontos.',3:'O de hoje ta pago! hahaha\nVocê ganhou + 3 de força.',2:'Houve um tempo de seca e suas raízes não tiveram de onde puxar nutrientes.\nVocê ganhou +2 de força', 4:'Você começou a treinar mais cedo e conseguiu dobrar seus exercicios!\nVocê ganha +4 de força.'}
         ganho_forca = choice(list(dic_treino.keys()))
         
-        if self.clima == 'chovendo':
-            influencia_clima = 3
-            self.forca += (ganho_forca + influencia_clima)
-            print(dic_treino[ganho_forca])
-            print('\n\nA chuva irrigou o solo da Bluefarm durante seus exercícios.\nVocê ganhou +3 de força.!')
-            print(f'\nSua força total agora é: {self.forca}')
-        else:
-            print(dic_treino[ganho_forca]) 
+        # if self.clima == 'chovendo':
+        #     influencia_clima = 3
+        #     self.forca += (ganho_forca + influencia_clima)
+        #     print(dic_treino[ganho_forca])
+        #     print('\n\nA chuva irrigou o solo da Bluefarm durante seus exercícios.\nVocê ganhou +3 de força.!')
+        #     print(f'\nSua força total agora é: {self.forca}')
+        # else:
+        #     print(dic_treino[ganho_forca]) 
             
 
 class Vilao(Personagem):
-    def __init__(self,clima):
-        super().__init__(clima)
+    def __init__(self):
+        super().__init__()
         ganho_forca= randint(1,5)
         self.forca += ganho_forca
         self.clima= clima
@@ -61,84 +61,64 @@ class Vilao(Personagem):
 
         lista_jaForam.append(escolha_vilao) # adiciona o vilão escolhido na lista dos vilões que já foram
                 
-        if self.clima == 'ensolarado': #influencia do clima na força do vilão escolhido
-            self.força += 3
-            print(f'\nHouve uma temporada de seca na horta dos arruaceiros, {escolha_vilao} desviaram a irrigação para si ganharam +3 de força.')     
+        # if self.clima == 'ensolarado': #influencia do clima na força do vilão escolhido
+        #     self.força += 3
+        #     print(f'\nHouve uma temporada de seca na horta dos arruaceiros, {escolha_vilao} desviaram a irrigação para si ganharam +3 de força.')     
         return escolha_vilao        
  
 # Abertura do jogo
 #abertura()
 
 # Começo do jogo
-lista_clima = ['chovendo','ensolarado']
-clima= choice(lista_clima)
 
-batata= Heroi(clima)
-vilao= Vilao(clima)
+batata= Heroi()
+vilao= Vilao()
 
-clima
 print()
 rodada = 0
 while True:
-    if clima == 'chovendo': # Começo para dias de chuva
-        sleep(1)
-        print(f'Bom dia, Super Batata!')
+    lista_clima = ['chovendo','ensolarado']
+    clima= choice(lista_clima)
+    sleep(1)
+    print(f'Bom dia, Super Batata!')
+    sleep(1.3)
+    print('\nÉ um otimo dia para treinar e derrotar os vilões que ameaçam a "BlueFarm".')
+    sleep(1.3)
+    print(f'Vida atual:███')
+    if clima == 'ensolarado':
+        batata.forca +=3
+    if clima == 'chuva':
+        vilao.forca +=3
+    print('O que deseja fazer?')
+    sleep(1.3)
+    print('\n1- Treinar')
+    sleep(1.3)
+    print('2- Derrotar alguns vegetais arruaceiros')
+    sleep(1.3)
+    print('\nSituação do clima: chovendo')
+    sleep(1)
+    escolha=input('\nR:')
+    while escolha not in ['1','2']:
+        print('Entrada inválida!')
+        sleep(1.2)
+        print('\nDigite 1 para treinar ou 2 para enfrentar algum vilão:')
+        sleep(2)
+        print('Lembre-se, está chovendo!')
         sleep(1.3)
-        print('\nÉ um otimo dia para treinar e derrotar os vilões que ameaçam a "BlueFarm".')
-        sleep(2.5)
-        print('O que deseja fazer?')
-        sleep(1.5)
-        print('\n1- Treinar')
-        sleep(1.3)
-        print('2- Derrotar alguns vegetais arruaceiros')
-        sleep(1.5)
-        print('\nSituação do clima: chovendo')
-        sleep(1)
-        escolha=input('\nR:')
-        while escolha not in ['1','2']:
-            print('Entrada inválida!')
-            sleep(1.2)
-            print('\nDigite 1 para treinar ou 2 para enfrentar algum vilão:')
-            sleep(2)
-            print('Lembre-se, está chovendo!')
-            sleep(1.8)
-            escolha = input('R: ')
-    else: # Começo para dias de sol
-        sleep(1)
-        print(f'Bom dia, Super Batata!')
-        sleep(1.3)
-        print('\nÉ um otimo dia para treinar e derrotar os vilões que ameaçam a "BlueFarm".')
-        sleep(2.5)
-        print('O que deseja fazer?')
-        sleep(1.5)
-        print('\n1- Treinar')
-        sleep(1.3)
-        print('2- Derrotar alguns vegetais arruaceiros')
-        sleep(1.5)
-        print('\nSituação do clima: ensolarado')
-        sleep(1)
-        escolha=input('\nR:')
-        while escolha not in ['1','2']:
-            print('Entrada inválida!')
-            sleep(1.2)
-            print('\nDigite 1 para treinar ou 2 para enfrentar algum vilão:')
-            sleep(2)
-            print('Lembre-se, está ensolarado!')
-            sleep(1.8)
-            escolha = input('R: ')
-            sleep(0.5)
-
+        escolha = input('R: ')
     # Testando as escolhas 
     if escolha == '2':
         print('\nOs arruceiros estão plantados a mais tempo que você e se beneficiaram do uso de componentes tóxicos.\nTem certeza que deseja ataca-los?')
-        sleep(2.5)
+        sleep(1.3)
         print('\n1- Sim. Eu sou uma Super Batata, irei ataca-los agora mesmo!')
         sleep(1.5)
         print('2- Não, acho melhor treinar mais um pouquinho antes.')
+        print()
+        print(f'Força atual: 10 pts')
         escolha= input('R: ')
         if escolha == '2':
             batata.treinar()
-    
+
         qnt_treino= 0
 
         # Escolha do inimigo e Batatalha
@@ -149,20 +129,20 @@ while True:
             print('Só a Super Batata pode derrotar os inimigos e acabar com as raízes do mal! ')
             # Batalha
             if batata.forca < vilao.forca:  # Se o vilão for mais forte
-                print(f'Força atual: 10 pts')
+                print(f'\n\n{inimigos.capitalize()}: {vilao.forca} pts de força')
+                print()
+                print(f'\n\nVocê virou um purê nas mãos dos inimigos.\nExercite seus carboidratos e tente novamente!')
+                batata.vitalidade -= 1 # Herói Perde 1 de vitalidade
                 if batata.vitalidade== 3:
                     print(f'Vida atual:███')
                 elif batata.vitalidade== 2:
                     print(f'Vida atual:██')     
                 elif batata.vitalidade==1:
                     print(f'Vida atual:█')
-                print(f'\n\n{inimigos.capitalize()}: {vilao.forca} pts de força')
-
-                print(f'\n\nVocê virou um purê nas mãos dos inimigos.\nExercite seus carboidratos e tente novamente!')
-
-                batata.vitalidade -= 1 # Herói Perde 1 de vitalidade 
+                print()
+                
                 if batata.vitalidade == 0: # Se a vitalidade chegar a 0 dá Game Over
-                    print ('game over')
+                    print('Game Over')
                     exit()
             elif batata.forca >= vilao.forca:
                 print(f'Força atual: [10]pts')
@@ -176,5 +156,6 @@ while True:
                 print(f'\n\n{inimigos.capitalize()}: {vilao.forca} pts de força')
 
                 print(f'\n\nSanta Batatuda...Você derrotou os inimigos!!!\n Mas, calma! A Bluefarm ainda não está livre da gange dos agroTóxicos.')
+                print()
     if escolha == '1':
         batata.treinar()
