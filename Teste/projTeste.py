@@ -9,13 +9,13 @@ class Personagem:
     def __init__(self):
         forca=10   #força padrão de qualquer personagem
         self.forca= forca
-        # self.clima=''
+        
        
 class Heroi(Personagem):
     def __init__(self):
         super().__init__()
         self.vitalidade= 3 # vida do Herói
-        self.clima= clima
+       
 
     def atacar(self,treino=0):
         self.força_adicional = treino
@@ -40,7 +40,7 @@ class Vilao(Personagem):
         super().__init__()
         ganho_forca= randint(1,5)
         self.forca += ganho_forca
-        self.clima= clima
+       
          
 
     def escolher_vilão(self):
@@ -85,17 +85,19 @@ while True:
     print('\nÉ um otimo dia para treinar e derrotar os vilões que ameaçam a "BlueFarm".')
     sleep(1.3)
     print(f'Vida atual:███')
-    if clima == 'ensolarado':
-        batata.forca +=3
-    if clima == 'chuva':
-        vilao.forca +=3
+    # if clima == 'ensolarado':
+        # vilao.forca +=3        
+    # if clima == 'chuva':
+    #     self.forca +=3
+        print('\nSituação do clima: chovendo')
+        
     print('O que deseja fazer?')
     sleep(1.3)
     print('\n1- Treinar')
     sleep(1.3)
     print('2- Derrotar alguns vegetais arruaceiros')
     sleep(1.3)
-    print('\nSituação do clima: chovendo')
+    
     sleep(1)
     escolha=input('\nR:')
     while escolha not in ['1','2']:
