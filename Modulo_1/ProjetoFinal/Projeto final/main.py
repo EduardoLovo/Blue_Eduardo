@@ -134,7 +134,7 @@ clima= choice(lista_clima)
 
 batata= Heroi(clima)
 vilao= Vilao(clima)
-# abertura()
+abertura()
 while True:
     print()
     print()
@@ -282,14 +282,22 @@ while True:
                     print('▬▬'*60)
 
             elif escolha == '2':
+                print()
                 sleep(0.5)
-                print('▬▬'*60)
+                print('▬▬'*50)
                 sleep(0.5)
-                print(f'\nQue decepção para os Orgânicos assistir a Super Batata fugir de {vilao.nome.capitalize()}...')
+                print(f'Que decepção para os Orgânicos assistir a Super Batata fugir de {vilao.nome.capitalize()}...')
                 sleep(1)
-                print('\nAcho melhor você deixar de ser orgulhoso e ir treinar um pouco')
+                print('Vá para casa, deixe de ser orgulhoso e treine um pouco amanhã')
                 sleep(0.5)
-                print('▬▬'*60)
+                print('▬▬'*50)
+                print()
+                for i in range(35):
+                    print('Z',end='', flush=True )
+                    sleep(0.05)
+                    print('z',end='', flush=True )
+                    sleep(0.05)
+                print()
 
     elif escolha == '1':
         batata.treinar()
