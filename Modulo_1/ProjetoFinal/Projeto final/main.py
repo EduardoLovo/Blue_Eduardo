@@ -62,12 +62,12 @@ class Heroi(Personagem):
             print('-='*60)
             sleep(1)
             print('\nVá para casa descansar, pois amanhã será um longo dia...........')
-            for i in range (60):
-                print('.',end='', flush=True )
+            for i in range(35):
+                print('Z',end='', flush=True )
                 sleep(0.05)
-            sleep(3)
+                print('z',end='', flush=True )
+                sleep(0.05)
             print()
-            print('.'*60)
             
     def gameover(self):
         self.vitalidade -= 1 # Herói Perde 1 de vitalidade 
