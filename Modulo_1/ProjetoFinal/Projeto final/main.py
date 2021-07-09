@@ -126,7 +126,7 @@ class Vilao(Personagem):
         
                 
 # Abertura do jogo
-abertura()
+# abertura()
 
 # Começo do jogo
 lista_clima = ['chovendo','ensolarado']
@@ -134,7 +134,7 @@ clima= choice(lista_clima)
 
 batata= Heroi(clima)
 vilao= Vilao(clima)
-abertura()
+
 while True:
     print()
     print()
