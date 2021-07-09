@@ -1,8 +1,8 @@
 from random import choice
 from time import sleep
 from random import randint
-# from abertura import abertura
-# from gameover import gameover
+from abertura import abertura
+from gameover import gameover
 
 class Personagem:
     def __init__(self,clima):
@@ -29,21 +29,27 @@ class Heroi(Personagem):
 
             print()
             sleep(0.5)
-            print('🌨 '*45)
+            print('🌨🌨 '*25)
             sleep(1)
             print(dic_treino[ganho_forca])
-            sleep(4)
-            print('\nA chuva irrigou o solo da Bluefarm.\nVocê ganhou +3 de bônus!')
-            sleep(1.5)
-            print(f'\nSua força total agora é: {self.forca} pts')
+            sleep(3)
+            print('\nA chuva irrigou o solo da Bluefarm.\nVocê ganhou +3 de bônus!\n')
             sleep(1)
-            print('🌨 '*45)
+            print('▬▬'*16)
+            sleep(0.5)
+            print(f'Sua força total agora é: {self.forca} pts')
+            sleep(1)
+            print('▬▬'*16)
+            sleep(0.5)
+            print('🌨🌨 '*25)
             sleep(2)
             print('\nVá para casa descansar, pois amanhã será um longo dia...........')
-            for i in range(60):
-                print('.',end='', flush=True )
+            for i in range(35):
+                print('Z',end='', flush=True )
                 sleep(0.05)
-            print('.'*60)
+                print('z',end='', flush=True )
+                sleep(0.05)
+            print()
         else:
             print()
             sleep(0.5)
@@ -67,7 +73,7 @@ class Heroi(Personagem):
         self.vitalidade -= 1 # Herói Perde 1 de vitalidade 
         if self.vitalidade == 0: # Se a vitalidade chegar a 0 dá Game Over
             print()
-            # gameover()
+            gameover()
             print()
             exit()
 
@@ -128,7 +134,7 @@ clima= choice(lista_clima)
 
 batata= Heroi(clima)
 vilao= Vilao(clima)
-
+# abertura()
 while True:
     print()
     print()
