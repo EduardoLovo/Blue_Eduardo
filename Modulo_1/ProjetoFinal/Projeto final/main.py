@@ -126,7 +126,7 @@ class Vilao(Personagem):
         
                 
 # Abertura do jogo
-# abertura()
+abertura()
 
 # Começo do jogo
 lista_clima = ['chovendo','ensolarado']
