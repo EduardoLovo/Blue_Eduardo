@@ -1,8 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
+
+section#texto-img{
+    display: flex;
+    /* justify-content: center; */
+}
+section#texto-img div#texto{
+    font-size: 1.5vw;
+    color: #0066ff;
 }
 
-section#texto-img div#um{
+section#dois{
     display: flex;
 }
