@@ -15,5 +15,6 @@ while True:
     print(soma)
     d[jogador] = partidas, soma
     print(d)
+    print()
 
 
