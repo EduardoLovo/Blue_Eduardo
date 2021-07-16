@@ -6,3 +6,5 @@
 # Quantidade solicitada não disponível ​
 
 # O programa deverá mostrar para o cliente a quantidade de itens comprados e o tota
+
+print('ola mundo')
