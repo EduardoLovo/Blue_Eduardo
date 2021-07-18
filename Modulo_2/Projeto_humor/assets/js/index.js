@@ -16,5 +16,5 @@ elementoBtn.addEventListener('click', () =>{
         elementoImg.src = './assets/img/picle400.png'
         elementoSituação.innerText = 'PICKLE RICK!'
         elementoBtn.value = 'primeiro'
-    }
+    }       
 })
