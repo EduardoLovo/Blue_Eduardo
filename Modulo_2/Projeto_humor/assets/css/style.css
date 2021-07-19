@@ -9,34 +9,28 @@
 
 html, body{
     width: 100%;
-    height: 100%;
-    background-color: #272727;
-}
-
-header{
-    background-image: url('../img/71k5sg2ZhuL._AC_SL1500_.jpg');
+    height: 125%;
+    background-image: url('../img/greenspace.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    height: 300px;
-    width: 100%;
-    display: flex;
-    align-items: center;
 }
 
 header h1{
-    padding: 5rem;
-    color: #272727;
-    font-size: 4rem;
-    text-shadow: 1rem, 1rem #ffffff80;
+    align-items: center;
+    padding-left: 20rem;
+    padding-top: 8rem;
+    color: #235f3a;
+    font-size: 7rem;
+    text-shadow: 0 0 0.2em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+    
 }
 
 section#infos{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 8rem;
 }
 
 section#infos div#txt{
@@ -71,7 +65,7 @@ section#infos div#txt button{
 
 section#infos div#txt button:hover{
     transform: scale(1.1);
-    box-shadow: 0px 0px 10px 1px #ffffff50;
+    box-shadow: 0px 0px 10px 10px #00000050;
 }
 
 section#infos div#img{
@@ -83,4 +77,6 @@ section#infos div#img img{
     width: 60%;
     border-radius: 3rem;
     transform: scaleX(-1);
+    
+    
 }
