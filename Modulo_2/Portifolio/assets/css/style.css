@@ -37,7 +37,7 @@ header{
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 3rem;
+   padding: 8rem;
 }
 
 header div#img-rocket {
@@ -71,7 +71,7 @@ section#sobre-mim{
 
 
 section#sobre-mim div img{
-   width: 60%;
+   width: 150%;
    border-radius: 50%;
    display: block;
    margin: auto;
@@ -82,6 +82,7 @@ section#sobre-mim div p{
    text-align: justify;
    color: #fff;
    line-height: 2.5rem;
+   padding-left: 12rem;
 }
 
 section#projetos{
@@ -186,6 +187,14 @@ section#habilidades div span#css{
    width: 30%;
 }
 
+section#habilidades div span#javaScript{
+   background-color: #3359ec;
+   color: #fff;
+   text-align: center;
+   padding: .3rem;
+   border-radius: 1rem;
+   width: 30%;
+}
 
 /* Seção de contato */
 
