@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
-tarefas= list()
+itens= list()
 
 # end-points / rotas
 
 @app.route('/')
 def index():
-    return render_template('index.html', titulo='Lista', tarefas=tarefas)
+    return render_template('index.html', titulo='Lista', itens)
 
 if __name__ == '__main__':
     app.run(debug=True)
