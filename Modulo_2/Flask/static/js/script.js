@@ -1,3 +1,5 @@
+  
+
 const itens = document.querySelectorAll('.itens') /* pega todos os elementos que possuem a class itens */
 
 itens.forEach((item)=>{ /* Varre a lista de itens, item a item */
