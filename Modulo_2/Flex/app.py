@@ -7,16 +7,15 @@ itens= list()
 
 @app.route('/')
 def index():
-    return render_template('index.html', titulo='Lista', itens)
+    return render_template('index.html', titulo='Lista', itens=itens)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 
 @app.route('/new', methods=['POST', 'GET'])
 def new():
    if request.method == 'POST': 
       item = request.form['item'] 
-      tarefas.append(item)
+      itens.append(item)
       return redirect('/') 
 
 
@@ -25,3 +24,5 @@ def clear():
    itens.clear()
    return redirect('/')
 
+if __name__ == '__main__':
+    app.run(debug=True)
