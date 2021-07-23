@@ -21,7 +21,7 @@ mail_settings = {
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": 'eduportifolio@gmail.com',
-    "MAIL_PASSWORD": 'Senha@123'
+    "MAIL_PASSWORD": 'Senhaedu@123'
 }
 
 app.config.update(mail_settings) #atualizar as configurações do app com o dicionário mail_settings

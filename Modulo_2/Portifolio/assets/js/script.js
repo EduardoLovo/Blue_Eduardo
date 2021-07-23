@@ -77,8 +77,6 @@ if (nomeOk && emailOk && msgOk) {
 } else { /* se não, desabilita */
    btnEnviar.disabled = true
 }
-})
-
 
 btnEnviar.addEventListener('click', () => {
 /* Pega a div de carregamento */

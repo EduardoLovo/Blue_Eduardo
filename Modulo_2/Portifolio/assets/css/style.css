@@ -1,4 +1,4 @@
-import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 
 * {
    margin: 0;
@@ -91,7 +91,9 @@ section#sobre-mim div p{
    
 }
 
-section#tituloPython h1{
+
+
+body section#tituloPython h1{
    display: flex;
    justify-content: center;
    border: 1px solid #3359ec;
@@ -103,8 +105,8 @@ section#tituloPython h1{
    border-radius: .5rem;
    margin: auto;
    margin-top: 2rem;
-   
 }
+
 section#projetos{
    display: flex; /* Aciona o flex-box e coloca um item do lado do outro automaticamente */
    justify-content: center; /* Alinha os itens horizontalmente */
@@ -439,4 +441,3 @@ section#contato div#carregamento{
    background-color: rgb(0, 88, 0);
    color: #fff;
  }
- 
