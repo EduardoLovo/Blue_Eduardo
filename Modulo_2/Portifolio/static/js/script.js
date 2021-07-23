@@ -3,11 +3,7 @@ let inputNome = document.querySelector('#nome') /* Cria a variável inputNome e 
 let inputEmail = document.querySelector('#email') /* Cria a variável inputEmail e coloca nela o elemento que possui o id email */
 let textareaMensagem = document.querySelector('#mensagem') /* Cria a variável textareaMensagem e coloca nela o elemento que possui o id mensagem */
 let btnEnviar = document.querySelector('#enviar') /* Cria a variável btnEnviar e coloca nela o elemento que possui o id enviar */
-let nomeOk = false /* variável de controle para o botão */
-let emailOk = false /* variável de controle para o botão */
-let msgOk = false /* variável de controle para o botão */
-btnEnviar.disabled = true /* Desabilita o botão assim que inicia a página html */ 
-
+ 
 /* Só posso utilziar a arrow function (=>) quando a função não tiver nome */
 
 /* Adiciona um evento de keyup no inputNome e realiza a função */
@@ -17,16 +13,6 @@ inputNome.addEventListener('keyup', () => {
       inputNome.style.borderColor = 'red' /* Troca a cor da borda do input para red */
    } else {
       inputNome.style.borderColor = 'green' /* Troca a cor da borda do input para green */
-   }
-   if(inputNome.value == '' || inputNome.value == undefined || inputNome.value == null) {
-      inputNome.style.borderColor = '#ccc'
-   }
-
-   /* Se todas as variáveis forem true habilita o botão */
-   if (nomeOk && emailOk && msgOk) {
-      btnEnviar.disabled = false
-   } else { /* se não, desabilita */
-      btnEnviar.disabled = true
    }
 })
 
@@ -45,13 +31,6 @@ inputEmail.addEventListener('keyup', () => {
    } else {
       inputEmail.style.borderColor = 'green' /* Troca a cor da borda do input para green */
    }  
-
-   /* Se todas as variáveis forem true habilita o botão */
-   if (nomeOk && emailOk && msgOk) {
-      btnEnviar.disabled = false
-   } else { /* se não, desabilita */
-      btnEnviar.disabled = true
-   }
 })
 
 /* Adiciona um evento de keyup no textareaMensagem e realiza a função */
@@ -59,35 +38,12 @@ textareaMensagem.addEventListener('keyup', ()=>{
    /* Verifica se o tamanho do valor do textareaMensagem é maior que 100  */
    if(textareaMensagem.value.length > 100){
       textareaMensagem.style.borderColor = 'red' /* Troca a cor da borda do input para red */
-      msgOk = false
    } else {
       textareaMensagem.style.borderColor = 'green' /* Troca a cor da borda do input para green */
-      msgOk = true
    }
 })
 
-// /* Adiciona um evento de click no btnEnviar e realiza a função */
-// btnEnviar.addEventListener('click', () => {
-//    alert('Formulário enviado com sucesso!') /* Mostra um alerta na tela com essa mensagem */
-// })
-
-/* Se todas as variáveis forem true habilita o botão */
-if (nomeOk && emailOk && msgOk) {
-   btnEnviar.disabled = false
-} else { /* se não, desabilita */
-   btnEnviar.disabled = true
-}
-})
-
-
+/* Adiciona um evento de click no btnEnviar e realiza a função */
 btnEnviar.addEventListener('click', () => {
-/* Pega a div de carregamento */
-let carregamento = document.querySelector('#carregamento')
-/* Mostra a div de carregamento, adicionando o 'flex' ao display */
-carregamento.style.display = 'flex'
-
-/* Pega o Form */
-let form = document.querySelector('form')
-/* Esconde o Form, mudando o display pra 'none' */
-form.style.display = 'none'
+   alert('Formulário enviado com sucesso!') /* Mostra um alerta na tela com essa mensagem */
 })
