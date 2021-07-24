@@ -1,49 +1,61 @@
+let nome = document.querySelector('#nome')
+let email = document.querySelector('#email')
+let mensagem = document.querySelector('#mensagem')
+let btnEnviar = document.querySelector('#enviar')
+let nomeOk = false
+let emailOk = false
+let msgOk = false
 
-let inputNome = document.querySelector('#nome') /* Cria a variável inputNome e coloca nela o elemento que possui o id nome */
-let inputEmail = document.querySelector('#email') /* Cria a variável inputEmail e coloca nela o elemento que possui o id email */
-let textareaMensagem = document.querySelector('#mensagem') /* Cria a variável textareaMensagem e coloca nela o elemento que possui o id mensagem */
-let btnEnviar = document.querySelector('#enviar') /* Cria a variável btnEnviar e coloca nela o elemento que possui o id enviar */
- 
-/* Só posso utilziar a arrow function (=>) quando a função não tiver nome */
+btnEnviar.disabled = true
 
-/* Adiciona um evento de keyup no inputNome e realiza a função */
-inputNome.addEventListener('keyup', () => { 
-   /* Verifica se o tamanho do valor do inputNome é menor que 2 */
-   if(inputNome.value.length < 2){
-      inputNome.style.borderColor = 'red' /* Troca a cor da borda do input para red */
-   } else {
-      inputNome.style.borderColor = 'green' /* Troca a cor da borda do input para green */
-   }
+nome.addEventListener('keyup', () => {
+    if (nome.value.length < 3) {
+       nome.style.borderColor = '#E03F3D'
+       nomeOk = false
+    } else if(nome.value == '' || nome.value == null) {
+        nome.style.borderColor = '#E03F3D'
+        nomeOk = false
+    } else {
+       nome.style.borderColor = 'green'
+       nomeOk = true
+    }
+ })
+
+email.addEventListener('keyup', () => {
+    if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+        email.style.borderColor = '#E03F3D'
+        emailOk = false
+    } else if(email.value == '' || email.value == null) {
+        email.style.borderColor = '#E03F3D'
+        emailOk = false
+    } else {
+        email.style.borderColor = 'green'
+        emailOk = true
+    }
 })
 
+mensagem.addEventListener('keyup', () => {
+    if (mensagem.value.length < 10 || mensagem.value.length > 500) {
+       mensagem.style.borderColor = '#E03F3D'
+       msgOk = false
+    } else if(mensagem.value == '' || mensagem.value == null) {
+        mensagem.style.borderColor = '#E03F3D'
+        msgOk = false
+    } else {
+       mensagem.style.borderColor = 'green'
+       msgOk = true
+    }
 
-/* Adiciona um evento de keyup no inputEmail e realiza a função */
-inputEmail.addEventListener('keyup', () => {
-   /* 
-   O indexOf procura um caractere no valor do inputEmail, se esse valor não existir ele retorna -1. 
-   Então essa expressão inputEmail.value.indexOf('@') == -1 é a mesmo coisa que:
-   Se no valor de inputEmail não existir @, faça...
-   || é o operador OU em JavaScript
-   && é o operador E em JavaScript
-   */
-   if(inputEmail.value.indexOf('@') == -1 || inputEmail.value.indexOf('.') == -1){
-      inputEmail.style.borderColor = 'red' /* Troca a cor da borda do input para red */
-   } else {
-      inputEmail.style.borderColor = 'green' /* Troca a cor da borda do input para green */
-   }  
-})
+    if (nomeOk && emailOk && msgOk) {
+        btnEnviar.disabled = false
+    } else {
+        btnEnviar.disabled = true
+    }
+ })
 
-/* Adiciona um evento de keyup no textareaMensagem e realiza a função */
-textareaMensagem.addEventListener('keyup', ()=>{
-   /* Verifica se o tamanho do valor do textareaMensagem é maior que 100  */
-   if(textareaMensagem.value.length > 100){
-      textareaMensagem.style.borderColor = 'red' /* Troca a cor da borda do input para red */
-   } else {
-      textareaMensagem.style.borderColor = 'green' /* Troca a cor da borda do input para green */
-   }
-})
-
-/* Adiciona um evento de click no btnEnviar e realiza a função */
 btnEnviar.addEventListener('click', () => {
-   alert('Formulário enviado com sucesso!') /* Mostra um alerta na tela com essa mensagem */
+    let carregamento = document.querySelector('#carregamento')
+    carregamento.style.display = 'flex'
+    let form = document.querySelector('form')
+    form.style.display = 'none'
 })
