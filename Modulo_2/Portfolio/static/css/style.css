@@ -296,9 +296,9 @@ section#contato div#form form label{
 }
 
 section#contato div#form form button{
-   border: 1px solid #3359ec;
+   border: 1px solid #182869;
    background-color: #fff;
-   color: #3359ec;
+   color: #182869;
    padding: 1rem;
    font-size: .8vw;
    font-weight: 600;
@@ -326,7 +326,7 @@ section#contato div#carregamento{
  }
  
  section#contato div#carregamento p{
-   color: #0066ff;
+   color: #182869;
    font-weight: 700;
    font-size: 2rem;
    width: 100%;
@@ -337,12 +337,22 @@ section#contato div#carregamento{
  section#contato div#carregamento div#loader{
    border: 13px solid #fff;
    border-radius: 50%;
-   border-top: 13px solid #0066ff;
-   border-bottom: 13px solid #0066ff;
+   border-top: 13px solid #182869;
+   border-bottom: 13px solid #182869;
    width: 80px;
    height: 80px;
    /* Anima o elemento div#loader criando a variável spin, em 2s de forma linear e infinita */
    animation: spin 2s linear infinite;
+ }
+
+ /* Anima a variável spin do animation */
+@keyframes spin {
+   0% {  /* Começa em 0% */
+     transform: rotate(0deg); /* Rotação do elemento no 0° */ 
+   } 
+   100% { /* Vai até 100% */
+     transform: rotate(360deg); /* Rotação do elemento em 360° */ 
+   }
  }
  
  /* Página Send */
