@@ -33,7 +33,7 @@ def send():
             request.form['nome'],
             request.form['email'],
             request.form['mensagem']
-   )
+      )
 
       msg = Message(
          subject='Contato do seu Portfolio',

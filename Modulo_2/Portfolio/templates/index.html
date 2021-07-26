@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Portfólio</title>
    <link rel="stylesheet" href="../static/css/style.css">
-   <link rel="shortcut icon" href="../Portifolio/static/img/icon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="../static/img/icon.ico" type="image/x-icon">
    
            
    <!--Link para acessar os icones do site font-awesome-->
@@ -152,29 +152,30 @@
 
       <div id="form">
 
-      <h3>Mande uma mensagem</h3>
+         <h3>Mande uma mensagem</h3>
 
-      <form action='/send' method="POST">
-         <label for="nome">Nome</label>
-         <input type="text" placeholder="Digite seu nome" id="nome" name="nome">
+         <form action='/send' method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="nome" name="nome">
 
-         <label for="email">E-mail</label>
-         <input type="email" placeholder="Digite seu email" id="email" name="email">
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu email" id="email" name="email">
 
 
-         <label for="mensagem">Mensagem</label>
-         <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
 
-         <button type="submit" id="enviar">Enviar</button>
+            <button type="submit" id="enviar">Enviar</button>
 
-      </form>
+         </form>
+      
 
-      <div id="carregamento">
-         <p>Enviando mensagem</p>
-         <div id="loader"></div>
-      </div>
-         
-   
+         <div id="carregamento">
+            <p>Enviando mensagem</p>
+            <div id="loader"></div>
+         </div>
+      </div>         
+      
       </section>
 
    </section>

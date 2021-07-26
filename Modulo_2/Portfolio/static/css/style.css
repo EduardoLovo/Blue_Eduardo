@@ -67,13 +67,8 @@ section#sobre-mim{
    justify-content: center;
    align-items: center;
    padding: 4rem;
-   /* background-color: #3359ec; */
    background-image: url('../img/thumb-1920-546183.jpg');
-   
-   
-
 }
-
 
 section#sobre-mim div img{
    width: 150%;
