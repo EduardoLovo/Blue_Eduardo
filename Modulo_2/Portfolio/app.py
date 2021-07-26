@@ -47,7 +47,7 @@ def send():
 
       mail.send(msg)
 
-   return render_template('index.html', formContato=formContato)
+   return render_template('send.html', formContato=formContato)
 
 if __name__ == '__main__':
    app.run(debug=True)
